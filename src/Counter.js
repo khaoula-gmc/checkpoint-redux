@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from 'react-redux';
+import './Counter.css'
 
 const mapStateToProps = state => {
     console.log(state);
@@ -21,9 +22,9 @@ const mapStateToProps = state => {
     return (
       <div className="counter">
         <h2>Counter</h2>
-        <div>
+        <div className='counter-comp'>
           <button onClick={() => decrement()}>-</button>
-          <span className="count">{props.count}</span>
+          <span className={props.count>=0?"count-blue":'count-red'}>{props.count}</span>
           <button onClick={() => increment()}>+</button>
         </div>
       </div>

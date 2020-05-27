@@ -1,0 +1,34 @@
+.counter
+{
+    background-color: antiquewhite;
+    border: burlywood;
+    box-shadow: black;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border-style: solid;
+}
+
+h2{
+    padding-left: 20px;
+    padding-top: 15px;
+}
+
+.counter-comp
+{
+    padding-left: 30px;
+}
+
+span 
+{
+    padding: 0 10px;
+}
+.count-blue
+{
+    color: blue;
+}
+
+.count-red
+{
+    color: red;
+}
