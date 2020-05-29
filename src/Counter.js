@@ -16,16 +16,21 @@ const mapStateToProps = state => {
     };
    
     const decrement = () => {
+      if (props.count>0) 
       props.dispatch({ type: "DECREMENT" });
     };
    
+    const reset =()=>{
+      props.dispatch({type:"RESET"})
+    }
     return (
       <div className="counter">
-        <h2>Counter</h2>
+        <h2>{props.count}</h2>
         <div className='counter-comp'>
           <button onClick={() => decrement()}>-</button>
-          <span className={props.count>=0?"count-blue":'count-red'}>{props.count}</span>
+          <button onClick={()=>reset()}>Reset</button>
           <button onClick={() => increment()}>+</button>
+          
         </div>
       </div>
     );
